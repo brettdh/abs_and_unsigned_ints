@@ -11,6 +11,7 @@ public:
     static const char *name;
 };
 
+// Type name printing borrowed from http://stackoverflow.com/a/81939
 #define DECLARE_TYPE_NAME(x) template<> const char *type_name<x>::name = #x;
 #define GET_TYPE_NAME(x) (type_name<typeof(x)>::name)
 
