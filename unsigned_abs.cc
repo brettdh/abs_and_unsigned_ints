@@ -55,6 +55,8 @@ int main()
     PRINT_ABS_VALUE((unsigned int)1 - (unsigned int)2, abs);
 
 #ifdef SHOW_AMBIGUOUS_STD_ABS
+    // compiler error; std::abs(unsigned int) is ambiguous
+    // (unclear which signed integer type to convert to)
     PRINT_ABS_VALUE(a-b, std::abs);
 #endif
 
